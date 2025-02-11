@@ -3,4 +3,10 @@
 
 - Angel Abraham Herrera Rivera
 - angelherriv183@gmail.com
-- 
+
+git add .
+git commit -m "cambios"
+git push
+
+## picoCTF - General Skills
+- Lets Warm Up
