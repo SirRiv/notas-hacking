@@ -9,4 +9,6 @@ git commit -m "cambios"
 git push
 
 ## picoCTF - General Skills
-- Lets Warm Up
+- 01 - Lets Warm Up
+- 02 - 2Warm
+- 03 - Warmed Up
