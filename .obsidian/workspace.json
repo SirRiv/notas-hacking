@@ -55,12 +55,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
+                "file": "picoCTF/Web 1/01 - Insp3ct0r.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "README"
+              "title": "01 - Insp3ct0r"
             }
           },
           {
@@ -227,7 +227,15 @@
   },
   "active": "46d969d492e7f0b0",
   "lastOpenFiles": [
+    "picoCTF/Web 1/02 - where are the robots.md",
+    "picoCTF/Web 1/03 - logon.md",
+    "picoCTF/Web 1/04 - dont-use-client-side.md",
+    "picoCTF/Web 1/05 - picobrowser.md",
+    "picoCTF/Web 1/06 - Client-side-again.md",
+    "picoCTF/Web 1/01 - Insp3ct0r.md",
     "plantilla.md",
+    "README.md",
+    "picoCTF/Web 1",
     "picoCTF/04 - General Skills/10 - ASCII Numbers.md",
     "picoCTF/04 - General Skills/09 - binhexa.md",
     "picoCTF/04 - General Skills/08 - Binary Search.md",
@@ -247,13 +255,6 @@
     "picoCTF/03 - General Skills/05 - fixme1.py.md",
     "picoCTF/03 - General Skills/04 - convertme.py.md",
     "picoCTF/03 - General Skills/03 - Codebook.md",
-    "picoCTF/03 - General Skills/02 - runme.py.md",
-    "picoCTF/03 - General Skills/01 - Super SSH.md",
-    "picoCTF/02 - General Skills/07 - Makigarp Ground Mission.md",
-    "picoCTF/02 - General Skills/10 - First Find.md",
-    "picoCTF/02 - General Skills/09 - Big zip.md",
-    "picoCTF/02 - General Skills/08 - Repetitions.md",
-    "picoCTF/02 - General Skills/06 - Tab, Tab Attack.md",
     "picoCTF/03 - General Skills",
     "picoCTF/02 - General Skills",
     "picoCTF/01 - General Skills/Sin nombre",
