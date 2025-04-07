@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "plantilla.md",
+                "file": "picoCTF/Web 4/SOAP.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "plantilla"
+              "title": "SOAP"
             }
           }
         ]
@@ -184,15 +184,21 @@
   },
   "active": "a02811a5c6cc6934",
   "lastOpenFiles": [
+    "plantilla.md",
     "picoCTF/Forensic 1/05 - What Lies Within.md",
     "picoCTF/Forensic 1/04 - extensions.md",
     "picoCTF/Forensic 1/03 - shark on wire 1.md",
     "picoCTF/Forensic 1/02 - So Meta.md",
     "picoCTF/Forensic 1/01 - Glory of the Garden.md",
-    "plantilla.md",
+    "picoCTF/Web 4/Most Cookies.md",
+    "picoCTF/Web 4/Trickster.md",
+    "picoCTF/Web 4/MatchTheRegex.md",
+    "picoCTF/Web 4/SOAP.md",
+    "README.md",
+    "picoCTF/Web 4",
+    "Sin nombre",
     "Pasted image 20250401124503.png",
     "Pasted image 20250401124435.png",
-    "README.md",
     "picoCTF/Web 3/01 - Irish-Name-Repo 1.md",
     "picoCTF/Web 3/03 - JaWT Scratchpad.md",
     "picoCTF/Web 1/01 - Insp3ct0r.md",
@@ -212,15 +218,9 @@
     "picoCTF/Web 1",
     "picoCTF/04 - General Skills/10 - ASCII Numbers.md",
     "picoCTF/04 - General Skills/09 - binhexa.md",
-    "picoCTF/04 - General Skills/08 - Binary Search.md",
-    "picoCTF/04 - General Skills/07 - Collaborative Development.md",
-    "picoCTF/04 - General Skills/06 - Blame Game.md",
-    "picoCTF/04 - General Skills/05 - Time Machine.md",
     "picoCTF/04 - General Skills",
     "picoCTF/03 - General Skills",
     "picoCTF/02 - General Skills",
-    "picoCTF/01 - General Skills/Sin nombre",
-    "Sin nombre",
-    "picoCTF/01 - General Skills"
+    "picoCTF/01 - General Skills/Sin nombre"
   ]
 }
