@@ -41,5 +41,5 @@ srriv@LAPTOP-7DDM83G8:~/SRSS/forensic/disk$
 
 ## Notas adicionales 
 
-
+``
 ## Referencias

@@ -62,6 +62,6 @@ srriv@LAPTOP-7DDM83G8:~/SRSS/forensic/ApprenticeSle$
 picoCTF{by73_5urf3r_3497ae6b}
 ~~~
 ## Notas adicionales 
-
+``
  
 ## Referencias

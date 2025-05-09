@@ -82,4 +82,5 @@ srriv@LAPTOP-7DDM83G8:~/SRSS/forensic/operation$
 
 `picoCTF{h4un71ng_p457_5113beab}`
 ## Notas adicionales 
+``
 ## Referencias
