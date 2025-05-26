@@ -1,33 +1,31 @@
 ## Descripción
-[🥛](http://mercury.picoctf.net:29522/)
+The Network Operations Center (NOC) of your local institution picked up a suspicious file, they're getting conflicting information on what type of file it is. They've brought you in as an external expert to examine the file. Can you extract all the information from this strange file?Download the suspicious file [here](https://artifacts.picoctf.net/c_titan/7/flag2of2-final.pdf).
+
 Hints:
-1. Look at the problem category
+1. This problem can be solved by just opening the file in different ways
 ## Solución 
-
-```srriv@LAPTOP-7DDM83G8:~/SRSS/forensic/Milkslap$ export RUBY_THREAD_VM_STACK_SIZE=500000000
-srriv@LAPTOP-7DDM83G8:~/SRSS/forensic/Milkslap$ zsteg concat_v.png
-imagedata           .. text: "\n\n\n\n\n\n\t\t"
-b1,b,lsb,xy         .. text: "picoCTF{imag3_m4n1pul4t10n_sl4p5}\n"
-b1,bgr,lsb,xy       .. /var/lib/gems/3.2.0/gems/iostruct-0.5.0/lib/iostruct.rb:180:in `inspect': stack level too deep (SystemStackError)
-        from /var/lib/gems/3.2.0/gems/zsteg-0.2.13/lib/zsteg/checker/wbstego.rb:41:in `to_s'
-        from /var/lib/gems/3.2.0/gems/iostruct-0.5.0/lib/iostruct.rb:180:in `inspect'
-        from /var/lib/gems/3.2.0/gems/zsteg-0.2.13/lib/zsteg/checker/wbstego.rb:41:in `to_s'
-        from /var/lib/gems/3.2.0/gems/iostruct-0.5.0/lib/iostruct.rb:180:in `inspect'
-        from /var/lib/gems/3.2.0/gems/zsteg-0.2.13/lib/zsteg/checker/wbstego.rb:41:in `to_s'
-        from /var/lib/gems/3.2.0/gems/iostruct-0.5.0/lib/iostruct.rb:180:in `inspect'
-        from /var/lib/gems/3.2.0/gems/zsteg-0.2.13/lib/zsteg/checker/wbstego.rb:41:in `to_s'
-        from /var/lib/gems/3.2.0/gems/iostruct-0.5.0/lib/iostruct.rb:180:in `inspect'
-         ... 4807703 levels...
-        from /var/lib/gems/3.2.0/gems/zsteg-0.2.13/lib/zsteg.rb:26:in `run'
-        from /var/lib/gems/3.2.0/gems/zsteg-0.2.13/bin/zsteg:8:in `<top (required)>'
-        from /usr/local/bin/zsteg:25:in `load'
-        from /usr/local/bin/zsteg:25:in `<main>'
-srriv@LAPTOP-7DDM83G8:~/SRSS/forensic/Milkslap$
-
+Abrimos el PDF y encontramos la parte final de la bandera:
+```
+1n_pn9_&_pdf_53b741d6}
 ```
 
+Usamos una librería para convertir el pdf en png, para usar el comando convert se tiene que instalar `imagemagick` con el comando `sudo apt install imagemagick`:
+
+```
+SrRiv:~/SRSS/forensic/secretof
+>>> convert flag2of2-final.pdf flag2of2-final.png
+convert-im6.q16: profile 'icc': 'RGB ': RGB color space not permitted on grayscale PNG `flag2of2-final.png' @ warning/png.c/MagickPNGWarningHandler/1669.
+SrRiv:~/SRSS/forensic/secretof
+>>> ls
+flag2of2-final.pdf  flag2of2-final.png
+SrRiv:~/SRSS/forensic/secretof
+>>> open flag2of2-final.png
+```
+
+Una vez abierta la imagen podremos completar la bandera:
+
 ~~~
-picoCTF{imag3_m4n1pul4t10n_sl4p5}
+picoCFT{f1u3n7_1n_pn9_&_pdf_53b741d6}
 ~~~
 
 

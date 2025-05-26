@@ -1,38 +1,30 @@
 ## Descripción
-[🥛](http://mercury.picoctf.net:29522/)
+A group of underground hackers might be using this legit site to communicate. Use your forensic techniques to uncover their message
+
+Additional details will be available after launching your challenge instance.
 Hints:
-1. Look at the problem category
+1. In the country that doesn't exist, the flag persists
+
 ## Solución 
 
-```srriv@LAPTOP-7DDM83G8:~/SRSS/forensic/Milkslap$ export RUBY_THREAD_VM_STACK_SIZE=500000000
-srriv@LAPTOP-7DDM83G8:~/SRSS/forensic/Milkslap$ zsteg concat_v.png
-imagedata           .. text: "\n\n\n\n\n\n\t\t"
-b1,b,lsb,xy         .. text: "picoCTF{imag3_m4n1pul4t10n_sl4p5}\n"
-b1,bgr,lsb,xy       .. /var/lib/gems/3.2.0/gems/iostruct-0.5.0/lib/iostruct.rb:180:in `inspect': stack level too deep (SystemStackError)
-        from /var/lib/gems/3.2.0/gems/zsteg-0.2.13/lib/zsteg/checker/wbstego.rb:41:in `to_s'
-        from /var/lib/gems/3.2.0/gems/iostruct-0.5.0/lib/iostruct.rb:180:in `inspect'
-        from /var/lib/gems/3.2.0/gems/zsteg-0.2.13/lib/zsteg/checker/wbstego.rb:41:in `to_s'
-        from /var/lib/gems/3.2.0/gems/iostruct-0.5.0/lib/iostruct.rb:180:in `inspect'
-        from /var/lib/gems/3.2.0/gems/zsteg-0.2.13/lib/zsteg/checker/wbstego.rb:41:in `to_s'
-        from /var/lib/gems/3.2.0/gems/iostruct-0.5.0/lib/iostruct.rb:180:in `inspect'
-        from /var/lib/gems/3.2.0/gems/zsteg-0.2.13/lib/zsteg/checker/wbstego.rb:41:in `to_s'
-        from /var/lib/gems/3.2.0/gems/iostruct-0.5.0/lib/iostruct.rb:180:in `inspect'
-         ... 4807703 levels...
-        from /var/lib/gems/3.2.0/gems/zsteg-0.2.13/lib/zsteg.rb:26:in `run'
-        from /var/lib/gems/3.2.0/gems/zsteg-0.2.13/bin/zsteg:8:in `<top (required)>'
-        from /usr/local/bin/zsteg:25:in `load'
-        from /usr/local/bin/zsteg:25:in `<main>'
-srriv@LAPTOP-7DDM83G8:~/SRSS/forensic/Milkslap$
+Después de usar varias herramientas como `zsteg, eog, gimp`, usamos una herramienta llamada stepic.
 
+```
+SrRiv:~/SRSS/forensic/flags
+>>> stepic -i upz.png -d
+/usr/local/lib/python3.12/dist-packages/pillow-11.2.1-py3.12-linux-x86_64.egg/PIL/Image.py:3442: DecompressionBombWarning: Image size (150658990 pixels) exceeds limit of 89478485 pixels, could be decompression bomb DOS attack.
+  warnings.warn(
+picoCTF{fl4g_h45_fl4g1a2a9157}SrRiv:~/SRSS/forensic/flags
+>>>
 ```
 
 ~~~
-picoCTF{imag3_m4n1pul4t10n_sl4p5}
+picoCTF{fl4g_h45_fl4g1a2a9157}
 ~~~
 
 
 ## Notas adicionales 
 
-``
+`stepic` es una herramienta de **esteganografía** en Linux, usada para **ocultar mensajes dentro de imágenes**, como archivos **png** .
 
 ## Referencias
